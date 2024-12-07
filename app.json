@@ -1,0 +1,95 @@
+{
+  "expo": {
+    "scheme": "smartklab",
+    "slug": "smartklab",
+    "name": "SMARTKLAP",
+    "plugins": [
+      "@stream-io/video-react-native-sdk",
+      [
+        "@config-plugins/react-native-webrtc",
+        {
+          "cameraPermission": "$(PRODUCT_NAME) requires camera access in order to capture and transmit video",
+          "microphonePermission": "$(PRODUCT_NAME) requires microphone access in order to capture and transmit audio"
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera."
+        }
+      ]
+    ],
+    "version": "100.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "buildNumber": "8.77.0",
+      "usesAppleSignIn": true,
+      "supportsTablet": true,
+      "bundleIdentifier": "Com.SmartClub.De",
+      "infoPlist": {
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLSchemes": [
+              "com.googleusercontent.apps.276139328972-88dbtkhl617unm9mkcqt8un0ud58602p"
+            ]
+          }
+        ]
+      },
+      "config": {
+        "googleSignIn": {
+          "reservedClientId": "276139328972-1rl1s43mdco4k63m3rkv1o4t1ruimj4c.apps.googleusercontent.com"
+        }
+      },
+      "bitcode": false
+    },
+    "android": {
+      "package": "com.ios.clubnet",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.INTERNET",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.WAKE_LOCK"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "config": {
+        "googleSignIn": {
+          "behavior": "web",
+          "clientId": "YOUR_GOOGLE_CLIENT_ID"
+        }
+      }
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/41b43af7-9caf-4d14-b5e7-f7fcf6f9d507"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "87a4208b-9d39-40af-97a8-03472206b2a5"
+      }
+    }
+  }
+}
